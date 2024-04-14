@@ -92,6 +92,8 @@ export async function fetchLatestInvoices() {
 
 export async function fetchCardData() {
   try {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     const numberOfInvoices = Number(20);
     const numberOfCustomers = Number(13);
     const totalPaidInvoices = formatCurrency(131500);
